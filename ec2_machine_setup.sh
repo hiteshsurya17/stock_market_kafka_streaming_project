@@ -12,7 +12,7 @@ advertised.listeners = PLAINTEXT://18.222.86.3:9092
 
 bin/zookeeper-server-start.sh config/zookeeper.properties
 
-export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M"
+export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M" # this is to allocate some memory for the kafka server
 bin/kafka-server-start.sh config/server.properties
 
 bin/kafka-topics.sh --create --bootstrap-server 18.222.86.3:9092 --topic demo_testing2 --replication-factor 1 --partitions 1
@@ -20,3 +20,4 @@ bin/kafka-topics.sh --create --bootstrap-server 18.222.86.3:9092 --topic demo_te
 bin/kafka-console-producer.sh --broker-list 18.222.86.3:9092 --topic demo_testing2
 
 bin/kafka-console-consumer.sh --bootstrap-server 18.222.86.3:9092 --topic demo_testing2
+
