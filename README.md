@@ -1,2 +1,4 @@
 # stock market kafka streaming data engineering project
+![Architecture-stock-market-project](https://github.com/hiteshsurya17/stock_market_project/assets/83537863/caba6a76-ced9-4179-94ef-0c694b0b83c1)
+
 I made a ec2 instance and installed kafka , java and set the public ipv4 as the server.properties broker ipv4 so that we can access this server from our local machine (python api produce and consumer ), i created a topic and written python api producer and tested it and made a aws connection with my local machine using aws cli through user access from AWS IAM to store the data in a s3 bucket which will be written in the local machine (python api consumer ) . In the producer API I made a simulated version of real time streaming of data by using looping and sleep with sample data from the stock market csv file. The data is stored in the s3 bucket with each record in a separate count json file
